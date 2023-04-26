@@ -1,20 +1,20 @@
-# Число загадывает компьютер, отгадывает человек
+# Computer proposes a number, human guess it
 import random
 
-print("\t\tДобро пожаловать в игру 'Угадай число'")
-print("Я загадал натуральное число от 1 до 100")
-print("Постарайся его угадать!\n")
+print("\t\tWelcome to the game 'Guess the number'")
+print("I guessed a natural number from 1 to 100")
+print("Try to guess it!\n")
 the_number = random.randint(1, 100)
-guess = int(input("Твое предположение: "))
+guess = int(input("Your proposal: "))
 tries = 1
 while guess != the_number:
     if guess > the_number:
-        print("Меньше...")
+        print("Lower...")
     else:
-        print("Больше...")
-    guess = int(input("Твое предположение еще раз: "))
+        print("Bigger...")
+    guess = int(input("Your proposal one more time: "))
     tries += 1
-print("Тебе удалось отгадать число! Это действительно", the_number)
-print("При этом ты потратил", tries, "попыток\n")
+print("You made it! It really was", the_number)
+print("You did it with", tries, "tries\n")
 
-input("\nНажмите Enter, чтобы выйти")
+input("\nPush Enter, to quit")
